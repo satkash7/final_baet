@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - BEAT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Ajout des icônes -->
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img class="titrelogo" src="beat r.png" alt="Logo BEAT">
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="A_propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div id="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+
+    <!-- Modal Menu -->
+    <div id="modal-menu" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeMenu()">&times;</span>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="A_propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section Contact -->
+    <section class="contact-section">
+        <div class="half-circle">
+            <section>
+                <h2>Contactez-Nous</h2>
+                <p>Votre avis compte pour nous ! Remplissez le formulaire ci-dessous et partagez votre feedback.</p>
+            </section>
+        </div>
+
+        <!-- Contact and Form Divs -->
+        <div class="contact-content">
+            <!-- Div 1: Adresse -->
+            <div class="address-container">
+                <div class="address-item">
+                    <i class="fas fa-map-marker-alt"></i> <!-- Icône pour l'adresse -->
+                    <p>RDC/Nord-Kivu/Goma <br> Q Keshero, AV de l’église, N19</p>
+                </div>
+
+                <div class="address-item">
+                    <i class="fas fa-phone-alt"></i> <!-- Icône pour le téléphone -->
+                    <p> +243 995 277 023</p>
+                </div>
+
+                <div class="address-item">
+                    <i class="fas fa-envelope"></i> <!-- Icône pour l'email -->
+                    <p> beatexpertise@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Div 2: Formulaire de Contact -->
+            <div class="contact-form-container">
+                <form action="send_mail.php" method="POST" class="contact-form">
+
+                    <label for="nom">Nom:</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+        <!-- Section Diaporama des images -->
+    <section class="diaporama-container">
+        <div id="diaporama-images">
+            <img src="innovation.jpg">
+            <img src="entreprenariat.jpg">
+            <img src="communication.jpg">
+            <img src="climat.jpg" >
+            <img src="risque.jpg" >
+            <strong><p>BEAT</p></strong>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contactez-Nous</h4>
+                <p>Adresse: RDC/Nord-Kivu/Goma <br>Q Keshero, AV de l’église, N19</p>
+                <p>Téléphone: +243 995 277 023</p>
+                <p>Email: beatexpertise@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Liens Utiles</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="A_propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Suivez-Nous</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

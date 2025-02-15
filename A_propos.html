@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - BEAT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img class="titrelogo" src="beat r.png" alt="Logo BEAT">
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="A_propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div id="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+
+    <!-- Modal Menu -->
+    <div id="modal-menu" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeMenu()">&times;</span>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="A_propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section À propos -->
+    <section class="about-section">
+        <div class="half-circle">
+            <section>
+                <h2>À propos de BEAT</h2>
+                <p>BEAT, un bureau d'expertise et d'accompagnement technique, est là pour offrir des solutions innovantes pour le développement technologique du Nord-Kivu. Nous nous engageons à transformer les défis locaux en opportunités, tout en fournissant une expertise de qualité et un soutien pratique pour les projets et initiatives de la région. Faites confiance à BEAT pour vous guider vers un avenir meilleur, plus technologique et durable.</p>
+                <p class="call-to-action">Venez visiter notre bureau à Goma ou contactez-nous pour discuter de vos projets et découvrir comment nous pouvons vous accompagner.</p>
+            </section>
+        </div>
+
+        <!-- Choix d'option Accompagnement ou Formation -->
+        <div class="options-container">
+            <div class="image-option" id="accompagnement-image" onclick="toggleForm('accompagnement')">
+                <img src="accompagnement-image1.jpg" alt="Accompagnement">
+                <strong>
+                    <p>Accompagnement</p>
+                </strong>
+            </div>
+            
+            <!-- Formulaire d'Accompagnement -->
+        <div id="accompagnement-form" class="form-container" style="display:none;">
+            <h3>Formulaire d'Accompagnement</h3>
+            <form action="submit_form.php" method="POST" class="form">
+                <label for="nom-accompagnement">Nom:</label>
+                <input type="text" id="nom-accompagnement" name="nom-accompagnement" placeholder="Votre nom" required>
+            
+                <label for="email-accompagnement">Email:</label>
+                <input type="email" id="email-accompagnement" name="email-accompagnement" placeholder="Votre email" required>
+            
+                <label for="projet-accompagnement">Votre projet:</label>
+                <textarea id="projet-accompagnement" name="projet-accompagnement" placeholder="Détaillez votre projet" rows="5" required></textarea>
+            
+                <button type="submit">Envoyer</button>
+            </form>
+            
+        </div>
+            <div class="image-option" id="formation-image" onclick="toggleForm('formation')">
+                <img src="formation-image.jpg" alt="Formation">
+                <strong>
+                    <p>Formation</p>
+                </strong>
+            </div>
+        </div>
+
+        
+
+        <!-- Formulaire de Formation -->
+        <div id="formation-form" class="form-container" style="display:none;">
+            <h3>Formulaire de Formation</h3>
+            <form action="submit_form.php" method="POST" class="form">
+                <label for="nom-formation">Nom:</label>
+                <input type="text" id="nom-formation" name="nom-formation" placeholder="Votre nom" required>
+            
+                <label for="email-formation">Email:</label>
+                <input type="email" id="email-formation" name="email-formation" placeholder="Votre email" required>
+            
+                <label for="formation-choisie">Formation choisie:</label>
+                <select id="formation-choisie" name="formation-choisie" required>
+                    <option value="communication">Communication pour le changement de comportement</option>
+                    <option value="entreprenariat">Entreprenariat</option>
+                    <option value="risques">Réduction des risques de catastrophes</option>
+                    <option value="technologie">Innovation et technologie de l'information</option>
+                    <option value="environnement">Changement climatique et environnement</option>
+                </select>
+            
+                <button type="submit">Envoyer</button>
+            </form>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contactez-Nous</h4>
+                <p>Adresse: RDC/Nord-Kivu/Goma <br>Q Keshero, AV de l’église, N19</p>
+                <p>Téléphone: +243 995 277 023</p>
+                <p>Email: beatexpertise@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Liens Utiles</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="A_propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Suivez-Nous</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
